@@ -1,0 +1,76 @@
+#top{
+    background-color:lightblue; 
+    color: black ; 
+    padding-top: 30px; 
+    padding-bottom: 30px; 
+}
+
+h1{
+
+    padding: 30px; 
+}
+
+#trash{
+    border: solid; 
+    color: black; 
+    background-color: lightgray; 
+    margin: 10px; 
+}
+
+#salesForm{
+    display:flex; 
+    align-content: space-between; 
+}
+
+.log{
+    font-weight: bold; 
+    font-size: 15px; 
+    margin: 10px; 
+}
+
+.box{
+    margin: 10px; 
+}  
+
+.error{
+    padding: 5px; 
+    margin-left: 15px; 
+    margin-right: 15px; 
+    background-color: coral; 
+    font-weight: bold; 
+    border-radius: 5px; 
+
+}   
+
+h4{
+    padding-bottom: 10px; 
+}
+
+.sales-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    gap: 10px;
+    align-items: center;
+}
+
+.sales-header {
+    color: gray;
+    border-bottom: 2px solid black;
+}
+
+.sales-record {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    gap: 10px;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+    cursor:move;
+}
+
+ .sales-record:hover{
+    background-color: lightyellow; 
+} 
+
+.welcome{
+    font-weight: bold;
+}

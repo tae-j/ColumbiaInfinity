@@ -1,0 +1,60 @@
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'log_sales.js') }}"></script>
+<script> 
+    sales = {{ sales|tojson }};
+
+    clients = {{ clients|tojson }}; 
+</script>
+
+    <div id = "container"> 
+        <!-- Header -->
+         <div id = "top">
+            <h1>Columbia Paper Infinity </h1>
+        
+        
+        <!-- Trash Part-->
+        <div id="trash" class="mt-4 p-3 text-center">
+            Drag sales here to delete
+        </div>
+
+        </div>
+
+
+        <br>
+
+        <!--Sales Input Form --> 
+         <div id = "salesForm" class = "mt-4 d-flex align-items-center"> 
+    
+            <span class = "log"> Log paper sales here: </span>
+
+            <input type = "text" id = "client-name" class = "box" placeholder = "Client">
+                <span class="error-msg" id="client-error"></span>
+
+            <input type = "text" id = "ream-count" class = "box" placeholder = "# reams"> 
+                <span class="error-msg" id="ream-error"></span>
+
+            <button id="submit-sale" class="btn btn-primary">Submit</button>
+
+            <span class="error-msg" id="both"></span>
+        </div>
+
+
+        <!-- List Here -->
+        <div id="sales-list-container" class="mt-4">
+            <h4>Sales Records</h4>
+            <div class="sales-grid sales-header">
+                <div>Salesperson</div>
+                <div>Client Name</div>
+                <div>Reams Sold</div>
+                <div></div>
+            </div>
+            <div id="sales-list">
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
